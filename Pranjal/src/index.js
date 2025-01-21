@@ -47,12 +47,12 @@ function getCards() {
 
         // for size
         const detail3 = document.createElement('h2');
-        detail3.className = 'text-xl font-bold lg:hidden lg:group-hover:block xl:text-2xl 2xl:text-3xl';
+        detail3.className = 'text-lg lg:hidden lg:group-hover:block xl:text-xl 2xl:text-2xl';
         detail3.textContent = image_arr[random_number].size;
 
         // for price
         const detail4 = document.createElement('h2');
-        detail4.className = 'text-xl lg:hidden lg:group-hover:block xl:text-2xl 2xl:text-3xl';
+        detail4.className = 'text-xl font-bold lg:hidden lg:group-hover:block xl:text-2xl 2xl:text-3xl';
         detail4.textContent = image_arr[random_number].price;
 
         description.appendChild(detail1);
