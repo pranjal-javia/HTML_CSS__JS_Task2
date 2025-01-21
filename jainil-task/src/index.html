@@ -1,14 +1,36 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en-US">
-<head>
+  <head>
     <title>My First Tailwind CSS Project</title>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="./output.css" rel="stylesheet">
-</head>
-<body>
-  <h1 class="text-3xl font-bold underline">
-    Hello world!
-  </h1>
-</body>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link href="./output.css" rel="stylesheet" />
+  </head>
+  <body
+    class="bg-gray-100 p-8 antialiased hover:subpixel-antialiased font-roboto"
+  >
+    <div class="flex justify-center items-center flex-row mb-4">
+      <input
+        type="number"
+        id="input"
+        class="mb-4 p-2 border border-gray-300 rounded"
+        placeholder="Enter a Number"
+      />
+      <button
+        id="generate"
+        class="mb-4 ml-4 p-2 bg-blue-500 hover:bg-blue-700 text-white rounded"
+      >
+        Generate
+      </button>
+    </div>
+    <main
+      id="shoe-container"
+      class="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8"
+    ></main>
+    <script type="module" src="index.js"></script>
+  </body>
 </html>
