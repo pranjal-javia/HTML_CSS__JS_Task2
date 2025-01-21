@@ -46,10 +46,13 @@ const colorThief = new ColorThief();
 
 function generateShoeCards(numberOfShoes) {
   shoeContainer.innerHTML = "";
+  let previdx = -1, idx = -1;
   for (let i = 0; i < numberOfShoes; i++) {
-    const shoeDetail =
-      shoeDetails[Math.floor(Math.random() * shoeDetails.length)];
-
+    while (idx === previdx) {
+      idx = Math.floor(Math.random() * shoeDetails.length);
+    }
+    previdx = idx;
+    const shoeDetail = shoeDetails[idx];
     const shoeCard = document.createElement("a");
     shoeCard.href = "#";
     shoeCard.className =
