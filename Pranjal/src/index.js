@@ -1,7 +1,7 @@
 const image_arr = [
-  { src: "../images/image1.jpg", alt: "image1", name: "Nike", size: "Size: 8UK", price: "$150.00", desc: "Air Force 1"},
-  { src: "../images/image2.jpg", alt: "image2", name: "Nike", size: "Size: 7UK", price: "$125.00", desc: "Next Nature Shoes"},
-  { src: "../images/image3.jpg", alt: "image3", name: "Adiddas", size: "Size: 6UK", price: "$90.00", desc: "Running Shoes"},
+  { src: "../images/image1.jpg", alt: "image1", name: "New Balance", size: "Size: 8UK", price: "$150.00", desc: "Air Force 1"},
+  { src: "../images/image2.jpg", alt: "image2", name: "New Balance", size: "Size: 7UK", price: "$125.00", desc: "Next Nature Shoes"},
+  { src: "../images/image3.jpg", alt: "image3", name: "Nike", size: "Size: 6UK", price: "$90.00", desc: "Running Shoes"},
   { src: "../images/image4.jpg", alt: "image4", name: "Nike", size: "Size: 9UK", price: "$110.00", desc: "Road Racing Shoes"},
 ];
 
