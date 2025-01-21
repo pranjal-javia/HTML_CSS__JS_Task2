@@ -14,7 +14,7 @@ function getCards() {
     let prev = -1, random_number = -1;
     for(let i=0; i<20 ; i++){
         const card = document.createElement('div');
-        card.className = 'flex flex-col relative rounded-lg shadow-2xl';
+        card.className = 'flex flex-col relative rounded-lg shadow-2xl group';
 
         while(random_number == prev){
             random_number = Math.floor(Math.random() * 4);
@@ -24,7 +24,7 @@ function getCards() {
         // image generation
         const image = document.createElement('img');
         // image.className = 'w-72 h-48 shadow-2xl rounded-t-lg sm:h-48 md:w-72 h-40 lg:w-56 xl:w-72 2xl:w-96';
-        image.className = 'w-full aspect-square shadow-2xl rounded-t-lg';
+        image.className = 'w-full aspect-square shadow-2xl rounded-lg';
  
         image.src = image_arr[random_number].src;
         image.alt = image_arr[random_number].src;
@@ -33,7 +33,7 @@ function getCards() {
         const description = document.createElement('div');
         // description.className = 'bg-black text-white p-4 rounded-b-lg lg:absolute w-64 bottom-0 overflow-hidden sm:w-64 md:w-64 lg:w-full';
         // description.className = 'bg-black text-white p-4 rounded-b-lg w-72 lg:w-56 xl:w-72 2xl:w-96';
-        description.className = 'bg-black text-white p-4 rounded-b-lg lg:absolute bottom-0 w-full h-1/5 overflow-hidden';
+        description.className = 'bg-black text-black p-4 rounded-lg lg:absolute lg:h-1/5 lg:group-hover:h-44 lg:group-hover:backdrop-blur-xl bg-white/30 lg:ease-in duration-300 lg:overflow-hidden lg:bottom-0 lg:w-full';
 
         // for name
         const detail1 = document.createElement('h1');
@@ -42,17 +42,17 @@ function getCards() {
 
         // for description
         const detail2 = document.createElement('h3');
-        detail2.className = 'text-xl xl:text-2xl 2xl:text-3xl';
+        detail2.className = 'text-xl lg:hidden lg:group-hover:block xl:text-2xl 2xl:text-3xl';
         detail2.textContent = image_arr[random_number].desc;
 
         // for size
         const detail3 = document.createElement('h2');
-        detail3.className = 'text-xl font-bold xl:text-2xl 2xl:text-3xl';
+        detail3.className = 'text-xl font-bold lg:hidden lg:group-hover:block xl:text-2xl 2xl:text-3xl';
         detail3.textContent = image_arr[random_number].size;
 
         // for price
         const detail4 = document.createElement('h2');
-        detail4.className = 'text-xl xl:text-2xl 2xl:text-3xl';
+        detail4.className = 'text-xl lg:hidden lg:group-hover:block xl:text-2xl 2xl:text-3xl';
         detail4.textContent = image_arr[random_number].price;
 
         description.appendChild(detail1);
