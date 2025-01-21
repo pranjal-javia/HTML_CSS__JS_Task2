@@ -1,0 +1,9 @@
+{
+  "type": "module",
+  "devDependencies": {
+    "tailwindcss": "^3.4.17"
+  },
+  "dependencies": {
+    "colorthief": "^2.6.0"
+  }
+}
