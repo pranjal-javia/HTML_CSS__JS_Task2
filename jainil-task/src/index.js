@@ -112,6 +112,10 @@ function generateShoeCards(numberOfShoes) {
 generateButton.addEventListener("click", () => {
   const numberOfShoes = parseInt(inputField.value, 10);
   if (!isNaN(numberOfShoes) && numberOfShoes > 0) {
+    const startTime = performance.now();
     generateShoeCards(numberOfShoes);
+    const duration = performance.now() - startTime;
+    const time = document.getElementById("time");
+    time.innerHTML = `${duration.toFixed(2)}ms`;
   }
 });
