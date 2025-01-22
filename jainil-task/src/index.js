@@ -82,7 +82,6 @@ const shoeDetails = [
 const colorThief = new ColorThief();
 const shoeColors = [];
 
-
 const fetchColors = () => {
   loader.classList.remove("hidden");
   const promises = shoeDetails.map((shoeDetail, index) => {
@@ -121,19 +120,23 @@ function generateShoeCards(numberOfShoes) {
 
     const color = shoeColors[idx];
     if (color) {
-      shoeCard.querySelector("a").style.backgroundColor = `rgba(${color[0]}, ${color[1]}, ${color[2]}, 0.10)`;
+      shoeCard.querySelector(
+        "a"
+      ).style.backgroundColor = `rgba(${color[0]}, ${color[1]}, ${color[2]}, 0.10)`;
     }
 
     shoeCard.querySelector("h3").textContent = shoeDetail.name;
     shoeCard.querySelector("p:nth-of-type(1)").textContent = shoeDetail.price;
-    shoeCard.querySelector("p:nth-of-type(2)").textContent = shoeDetail.description;
+    shoeCard.querySelector("p:nth-of-type(2)").textContent =
+      shoeDetail.description;
 
     const sizeList = shoeCard.querySelector("ul");
-    sizeList.innerHTML = ""; 
-    shoeDetail.sizes.forEach(size => {
+    sizeList.innerHTML = "";
+    shoeDetail.sizes.forEach((size) => {
       const li = document.createElement("li");
       li.tabIndex = 0;
-      li.className = "focus:ring-4 border border-black rounded-full h-8 w-8 md:h-10 md:w-10 lg:h-10 lg:w-10 xl:h-10 xl:w-10 2xl:h-12 2xl:w-12 flex justify-center items-center";
+      li.className =
+        "focus:ring-4 border border-black rounded-full h-8 w-8 md:h-10 md:w-10 lg:h-10 lg:w-10 xl:h-10 xl:w-10 2xl:h-12 2xl:w-12 flex justify-center items-center";
       li.textContent = size;
       sizeList.appendChild(li);
     });
