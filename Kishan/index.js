@@ -1,10 +1,10 @@
 let element = document.getElementById('fullpage');
 const Color = ['#fee2e2', '#fef9c3', '#dcfce7', '#dbeafe', '#e5e7eb']
-const imageUrl = ['https://res.cloudinary.com/dmoka7ahz/image/upload/v1737450730/nature-8797824_1280_ggfayu.png',
-    'https://res.cloudinary.com/dmoka7ahz/image/upload/v1737450727/background-3390802_1280_ha1frb.jpg',
-    'https://res.cloudinary.com/dmoka7ahz/image/upload/v1737450725/coffee-6171744_960_720_drm5xo.jpg',
-    'https://res.cloudinary.com/dmoka7ahz/image/upload/v1737450724/leaves-4235968_1280_jxbjhq.jpg',
-    'https://res.cloudinary.com/dmoka7ahz/image/upload/v1737450724/ai-generated-7706228_1280_sxcxgy.jpg'
+const imageUrl = ['https://res.cloudinary.com/dmoka7ahz/image/upload/v1737520701/samsung_s21_jgi5sa.jpg',
+    'https://res.cloudinary.com/dmoka7ahz/image/upload/v1737520701/apple_15_pro_hdzoaw.jpg',
+    'https://res.cloudinary.com/dmoka7ahz/image/upload/v1737520700/samsung_fold_doshvw.webp',
+    'https://res.cloudinary.com/dmoka7ahz/image/upload/v1737520964/vertu_knsmfg.webp',
+    'https://res.cloudinary.com/dmoka7ahz/image/upload/v1737520700/samsung_s23_altra_zb3h8m.avif'
 ]
 let prevImage = -1;
 let prevColorNo = -1;
@@ -22,10 +22,10 @@ for (let i = 0; i < 15; i++) {
 
 
     ItemName.className = 'font-extrabold font-Lora text-2xl sm:text-2xl md:text-2xl lg:text-3xl xl:text-3xl 2xl:text-5xl';
-    ItemName.innerHTML = "Item Header " + i + 1;
+    ItemName.innerHTML = "Phone " + (i + 1);
 
     ItemDes.className = 'font-Worksans md:pt-2 line-clamp-3 text-sm sm:text-md md:text-lg lg:text-lg xl:text-xl 2xl:text-2xl';
-    ItemDes.innerHTML = "Testing is the process of evaluating a system or its components to ensure it meets the specified requirements and functions correctly." + i + "th item";
+    ItemDes.innerHTML = "Phoen" + (i + 1) + "Testing is the process of evaluating a system or its components to ensure it meets the specified requirements and functions correctly." + i + "th item";
 
     ItemPrice.className = 'pt-2 font-medium font-sans pb-3 text-lg sm:text-xl md:text-2xl lg:text-2xl xl:text-3xl 2xl:text-3xl ';
     ItemPrice.innerHTML = "$ " + Math.floor(Math.random() * (1000 - 500) + 500);
