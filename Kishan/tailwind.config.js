@@ -2,7 +2,9 @@
 module.exports = {
     content: ["./*.{html,js}"],
     theme: {
-        extend: {},
+        extend: {
+            fontFamily: { Lora: ["Lora", "serif"], Worksans: ["Work Sans", "serief"] },
+        },
     },
-    plugins: [],
+    plugins: [require('@tailwindcss/line-clamp')],
 }
