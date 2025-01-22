@@ -43,9 +43,45 @@ const shoeDetails = [
     description: "Sporty trainers designed for high performance.",
     sizes: size,
   },
+  {
+    image: "../public/images/6l.jpg",
+    name: "Classic Boots",
+    price: "$110",
+    description: "Classic boots for a timeless look.",
+    sizes: size,
+  },
+  {
+    image: "../public/images/7l.jpg",
+    name: "Summer Sandals",
+    price: "$45",
+    description: "Light and comfortable sandals for summer.",
+    sizes: size,
+  },
+  {
+    image: "../public/images/8l.jpg",
+    name: "Winter Boots",
+    price: "$130",
+    description: "Warm and cozy boots for winter.",
+    sizes: size,
+  },
+  {
+    image: "../public/images/9l.jpg",
+    name: "Running Shoes",
+    price: "$85",
+    description: "High-performance running shoes.",
+    sizes: size,
+  },
+  {
+    image: "../public/images/10l.jpg",
+    name: "Formal Shoes",
+    price: "$95",
+    description: "Elegant formal shoes for special occasions.",
+    sizes: size,
+  },
 ];
 const colorThief = new ColorThief();
 const shoeColors = [];
+
 
 const fetchColors = () => {
   loader.classList.remove("hidden");
