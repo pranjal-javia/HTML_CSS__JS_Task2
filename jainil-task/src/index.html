@@ -1,10 +1,26 @@
 <!DOCTYPE html>
 <html lang="en-US">
   <head>
-    <title>My First Tailwind CSS Project</title>
     <meta charset="UTF-8" />
+    <title>My First Tailwind CSS Project</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="./output.css" rel="stylesheet" />
+    <style>
+      .spinner {
+        border: 4px solid rgba(0, 0, 0, 0.1);
+        border-left-color: #106ee8;
+        border-radius: 50%;
+        width: 3em;
+        height: 3em;
+        animation: spin 1s linear infinite;
+      }
+
+      @keyframes spin {
+        to {
+          transform: rotate(360deg);
+        }
+      }
+    </style>
   </head>
   <body
     class="bg-gray-100 p-8 antialiased hover:subpixel-antialiased font-roboto"
@@ -22,13 +38,48 @@
       >
         Generate
       </button>
-      <div id="time" class="flex h-10 justify-center items-center w-full md:w-72 mb-4 md:ml-4 p-2 bg-blue-500 hover:bg-blue-700 text-white rounded"></div>
+      <div
+        id="time"
+        class="flex h-10 justify-center items-center w-full md:w-72 mb-4 md:ml-4 p-2 bg-blue-500 hover:bg-blue-700 text-white rounded"
+      ></div>
+    </div>
+    <div
+      id="loader"
+      class="fixed inset-0 bg-gray-100 bg-opacity-75 flex items-center justify-center z-50"
+    >
+      <div class="spinner"></div>
     </div>
     <main
       id="shoe-container"
       class="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8"
-    ></main>
-    
+    >
+      <template id="shoe-card-template">
+        <a
+          href="#"
+          class="group transform transition duration-500 hover:scale-105 rounded-lg shadow-lg"
+        >
+          <img
+            src=""
+            alt=""
+            class="aspect-square w-full rounded-t-lg object-cover rounded-b-sm"
+            loading="lazy"
+          />
+          <div class="rounded-lg p-4 font-sans">
+            <h3
+              class="mt-4 text-lg sm:text-base md:text-xl lg:text-2xl xl:text-2xl 2xl:text-4xl font-regular text-gray-700"
+            ></h3>
+            <p
+              class="mt-1 text-xl sm:text-xl md:text-2xl lg:text-3xl xl:text-3xl 2xl:text-5xl font-bold text-gray-900"
+            ></p>
+            <p
+              class="mt-2 text-sm sm:text-sm md:text-sm lg:text-md xl:text-md 2xl:text-xl font-regular text-gray-600 line-clamp-1"
+            ></p>
+            <ul class="flex flex-row space-x-2"></ul>
+          </div>
+        </a>
+      </template>
+    </main>
+
     <script type="module" src="index.js"></script>
   </body>
 </html>
